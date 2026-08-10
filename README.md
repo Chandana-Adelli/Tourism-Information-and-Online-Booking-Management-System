@@ -1,59 +1,132 @@
-# TourismApp
+# 🏔️ Hill Explorer – Tourism Information and Online Booking Management System
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.3.
+A web-based tourism platform developed using Angular that allows users to explore popular hill stations in India, view detailed destination information, book hotels and tours, and complete a simulated payment flow.
 
-## Development server
+## 🌄 Project Overview
 
-To start a local development server, run:
+**Hill Explorer** is a tourism and online booking web application designed to provide users with an easy and interactive way to discover hill stations across India.
 
-```bash
-ng serve
-```
+The application provides destination exploration, detailed place information, hotel booking, tour booking, user authentication, contact services, feedback submission, and a payment workflow.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## ✨ Features
 
-## Code scaffolding
+### 🏠 Home Page
+- Attractive hero section
+- Hill station introduction
+- Popular destinations
+- Traveler reviews
+- Contact information
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### 🌍 Destinations
+- Explore multiple hill stations across India
+- Search destinations
+- Filter by category
+- Sort destinations by popularity and rating
+- Sort destinations by price
+- Pagination
+- Destination cards with ratings and visitor information
 
-```bash
-ng generate component component-name
-```
+### 📍 Place Details
+- Detailed destination information
+- Destination images
+- Location map
+- Package price
+- Hotel price per night
+- Direct hotel booking option
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### 🏨 Hotel Booking
+- Select check-in and check-out dates
+- Select number of rooms
+- Select adults and children
+- Choose room type
+  - Standard Room
+  - Deluxe Room
+  - Suite
+- Automatic booking summary
+- Dynamic total price
+- Continue to payment
 
-```bash
-ng generate --help
-```
+### 🎒 Tour Booking
+- Select destination
+- Display tour price
+- Enter traveler details
+- Enter email and phone number
+- Select travel date
+- Select adults and children
+- Automatic traveler count
+- Continue to payment
 
-## Building
+### 💳 Payment
+- Booking amount display
+- Selected room information
+- UPI payment option
+- QR code payment option
+- Payment completion button
+- Booking confirmation page
 
-To build the project run:
+> Note: The payment functionality in this project is implemented as a demonstration/simulation and is not connected to a real payment gateway.
 
-```bash
-ng build
-```
+### 🔐 User Authentication
+- Sign Up page
+- Sign In page
+- Username and password fields
+- User registration form
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+### 📞 Contact
+- Contact form
+- Email and mobile details
+- Location map
+- Message submission confirmation
 
-## Running unit tests
+### ⭐ Feedback
+- User feedback form
+- Rating selection
+- Feedback submission
+- Thank-you confirmation
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## 🛠️ Technologies Used
 
-```bash
-ng test
-```
+### Frontend
+- Angular
+- TypeScript
+- HTML5
+- CSS3
 
-## Running end-to-end tests
+### Development Tools
+- Angular CLI
+- Visual Studio Code
+- Git
+- GitHub
 
-For end-to-end (e2e) testing, run:
+## 📂 Project Structure
 
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```text
+Tourism-Information-and-Online-Booking-Management-System/
+│
+├── src/
+│   ├── app/
+│   │   ├── home/
+│   │   ├── destinations/
+│   │   ├── place-details/
+│   │   ├── navbar/
+│   │   ├── contact/
+│   │   ├── feedback/
+│   │   ├── signin/
+│   │   ├── signup/
+│   │   ├── payment/
+│   │   ├── success/
+│   │   └── pages/
+│   │       ├── book-hotel/
+│   │       └── book-tour/
+│   │
+│   ├── assets/
+│   │   └── images/
+│   │
+│   ├── index.html
+│   ├── main.ts
+│   └── styles.css
+│
+├── angular.json
+├── package.json
+├── tsconfig.json
+└── README.md
