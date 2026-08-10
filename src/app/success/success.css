@@ -1,0 +1,33 @@
+.success-container {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #e3f2fd, #ffffff);
+}
+
+.success-card {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  width: 400px;
+}
+
+.check-icon {
+  font-size: 60px;
+  color: #28a745;
+  margin-bottom: 15px;
+}
+
+.home-btn {
+  margin-top: 20px;
+  padding: 10px 25px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}

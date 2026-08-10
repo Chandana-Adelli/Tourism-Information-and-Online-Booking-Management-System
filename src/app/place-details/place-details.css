@@ -1,0 +1,69 @@
+/* Page Title */
+h2 {
+  color: #2c3e50;
+  letter-spacing: 1px;
+}
+
+/* Card Styling */
+.row.shadow {
+  background: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.row.shadow:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Image Styling */
+img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+/* Place Name */
+h3 {
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+/* Description */
+p {
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* Price Highlight */
+strong {
+  color: #2c3e50;
+}
+
+/* Button Styling */
+.btn-outline-primary {
+  border-radius: 25px;
+  padding: 8px 18px;
+}
+
+.btn-success {
+  border-radius: 25px;
+  padding: 8px 18px;
+  background: linear-gradient(45deg, #28a745, #218838);
+  border: none;
+}
+
+.btn-success:hover {
+  background: linear-gradient(45deg, #218838, #1e7e34);
+}
+
+/* Responsive spacing */
+@media (max-width: 768px) {
+  img {
+    height: 220px;
+  }
+}

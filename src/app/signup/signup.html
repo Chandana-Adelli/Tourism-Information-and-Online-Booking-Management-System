@@ -1,0 +1,33 @@
+<div class="auth-bg">
+  <div class="auth-box">
+
+    <h2>Sign Up</h2>
+
+<form (ngSubmit)="register()">
+
+<input type="text" placeholder="Username" [(ngModel)]="user.username" name="username" required>
+
+<input type="password" placeholder="Password" [(ngModel)]="user.password" name="password" required>
+
+<input type="email" placeholder="Email" [(ngModel)]="user.email" name="email">
+
+<input type="text" placeholder="City" [(ngModel)]="user.city" name="city">
+
+<input type="text" placeholder="Phone" [(ngModel)]="user.phone" name="phone">
+
+<button type="submit">Submit</button>
+
+</form>
+
+    <!-- success message -->
+    <p class="success" *ngIf="successMessage">
+      {{ successMessage }}
+    </p>
+
+    <p>
+      Already have an account?
+      <span (click)="goToSignin()">Sign In</span>
+    </p>
+
+  </div>
+</div>

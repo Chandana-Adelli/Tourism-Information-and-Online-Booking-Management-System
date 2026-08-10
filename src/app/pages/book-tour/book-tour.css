@@ -1,0 +1,38 @@
+.booking-bg{
+background-image: url('https://wallpaperaccess.com/full/2710452.jpg');
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+min-height:100vh;
+display:flex;
+align-items:center;
+}
+
+.booking-form{
+width:500px;
+padding:35px;
+background:rgba(255,255,255,0.2);
+backdrop-filter:blur(10px);
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+.booking-form h2{
+color:rgb(21, 21, 21);
+}
+
+.booking-form label{
+color:white;
+}
+
+.travellers{
+color:white;
+}
+
+.price{
+color:#000905dd;
+font-weight:bold;
+}

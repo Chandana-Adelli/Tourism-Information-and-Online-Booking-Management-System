@@ -1,0 +1,134 @@
+<!-- <h1 style="color:red">DESTINATIONS PAGE WORKING</h1> -->
+<section class="destinations-bg py-5">
+  <div class="container">
+
+  <!-- Page Title -->
+  <div class="text-center mb-5">
+    <h2 class="fw-bold">All Destinations</h2>
+  </div>
+
+  <!-- Search & Filters -->
+<div class="row mb-4 justify-content-center">
+
+  <div class="col-md-3">
+    <input 
+      type="text"
+      class="form-control"
+      placeholder="Search destination..."
+      [(ngModel)]="searchText"
+    >
+  </div>
+
+  <div class="col-md-3">
+    <select class="form-select" [(ngModel)]="selectedCategory">
+      <option value="All">All Categories</option>
+      <option value="Hill Station">Hill Station</option>
+      <option value="Adventure">Adventure</option>
+      <option value="Spiritual">Spiritual</option>
+      <option value="Wildlife">Wildlife</option>
+    </select>
+  </div>
+
+  <div class="col-md-3">
+    <select class="form-select" [(ngModel)]="selectedSort">
+      <option value="">Sort By</option>
+      <option value="popularity">Popularity</option>
+      <option value="rating">Rating</option>
+    </select>
+  </div>
+
+  <div class="col-md-3">
+    <select class="form-select" [(ngModel)]="selectedPrice">
+      <option value="">Sort by Price</option>
+      <option value="Low → High">Low → High</option>
+      <option value="High → Low">High → Low</option>
+    </select>
+  </div>
+
+</div>
+
+  <!-- Grid -->
+  <div class="row g-4">
+
+    <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let place of paginatedDestinations">
+
+      <div class="card h-100 shadow border-0 rounded-3">
+
+        <!-- Image -->
+        <img 
+          [src]="place.images[0]" 
+          class="card-img-top destination-img"
+          alt="{{place.name}}"
+        >
+
+        <!-- Card Body -->
+        <div class="card-body d-flex flex-column">
+
+          <h5 class="fw-bold mb-1">{{place.name}}</h5>
+
+          <p class="text-muted small mb-2">
+            {{place.location}}
+          </p>
+
+          <p class="small text-secondary flex-grow-1">
+            {{place.shortInfo}}
+          </p>
+
+          <!-- Rating Section -->
+          <div class="mb-3 small">
+            ⭐ {{place.rating}} |
+            👥 {{place.visitors}}
+          </div>
+
+          <!-- Buttons -->
+          <div class="mt-auto d-flex gap-2">
+            <button [routerLink]="['/destinations/place-details', place.id]" class="btn btn-primary">Visit</button>
+            <button class="btn btn-primary"
+(click)="goToTourBooking(place)">
+Book Tour
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Pagination -->
+<div class="d-flex justify-content-center mt-5" *ngIf="totalPages > 1">
+  <nav>
+    <ul class="pagination">
+
+      <!-- Previous -->
+      <li class="page-item" [class.disabled]="currentPage === 1">
+        <button class="page-link"
+                (click)="changePage(currentPage - 1)">
+          Previous
+        </button>
+      </li>
+
+      <!-- Page Numbers -->
+      <li class="page-item"
+          *ngFor="let page of [].constructor(totalPages); let i = index"
+          [class.active]="currentPage === i + 1">
+
+        <button class="page-link"
+                (click)="changePage(i + 1)">
+          {{ i + 1 }}
+        </button>
+      </li>
+
+      <!-- Next -->
+      <li class="page-item"
+          [class.disabled]="currentPage === totalPages">
+        <button class="page-link"
+                (click)="changePage(currentPage + 1)">
+          Next
+        </button>
+      </li>
+
+    </ul>
+  </nav>
+</div>
+
+</section>

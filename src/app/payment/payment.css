@@ -1,0 +1,78 @@
+.demo-note {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2344ea;
+  margin: 5px 0;
+}
+
+.note {
+  font-size: 13px;
+  color: gray;
+  line-height: 1.5;
+}
+
+.qr-image {
+  width: 180px;
+  height: 180px;
+  margin: 10px 0;
+}
+
+.payment-wrapper {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f5f6fa;
+  padding-top: 40px;
+}
+
+.payment-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.payment-card {
+  width: 340px;
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #3399cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+.upi-btn {
+  width: 100%;
+  padding: 12px;
+  background: #6a3bcf;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.upi-btn:hover {
+  background: #5e35b1;
+}
+
+.done-btn {
+  width: 100%;
+  padding: 10px;
+  background: #3b8dbd;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-top: 15px;
+  cursor: pointer;
+}

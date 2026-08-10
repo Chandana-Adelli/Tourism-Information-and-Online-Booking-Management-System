@@ -1,0 +1,92 @@
+<div class="booking-bg">
+
+<div class="container mt-5">
+
+<div class="row justify-content-center">
+
+<div class="col-md-5">
+
+<div class="booking-form">
+
+<h2 class="text-center mb-4">Tour Booking</h2>
+
+<label>Select Destination</label>
+<select class="form-control"
+        [(ngModel)]="selectedPlace"
+        [disabled]="selectedPlace">
+
+  <option [ngValue]="null" disabled>
+    -- Select Destination --
+  </option>
+
+  <option *ngFor="let place of allPlaces" [ngValue]="place">
+    {{place.name}} - {{place.location}}
+  </option>
+
+</select>
+
+<p *ngIf="selectedPlace" class="price">
+Tour Price: ₹ {{ selectedPlace.price }}
+</p>
+
+<label>Full Name</label>
+<input 
+  type="text"
+  class="form-control mb-3"
+  placeholder="Enter your full name"
+  [(ngModel)]="fullName"
+>
+
+<label>Email</label>
+<input
+  type="email"
+  class="form-control mb-3"
+  placeholder="Enter your email address"
+  [(ngModel)]="email"
+>
+
+<label>Phone Number</label>
+<input
+  type="tel"
+  class="form-control mb-3"
+  placeholder="Enter your phone number"
+  [(ngModel)]="phone"
+>
+
+<label>Travel Date</label>
+<input
+  type="date"
+  class="form-control mb-3"
+  [(ngModel)]="travelDate"
+>
+
+<label>Adults</label>
+<input
+  type="number"
+  class="form-control mb-3"
+  placeholder="Number of adults"
+  [(ngModel)]="adults"
+>
+
+<label>Children</label>
+<input
+  type="number"
+  class="form-control mb-3"
+  placeholder="Number of children"
+  [(ngModel)]="children"
+>
+
+<p class="travellers">
+Total Travelers: {{ adults + children }}
+</p>
+
+<button class="btn btn-primary w-100" (click)="goToPayment()">
+Continue to Payment
+</button>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>

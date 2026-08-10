@@ -1,0 +1,39 @@
+<div class="payment-wrapper">
+
+  <h2 class="payment-title">Secure Payment</h2>
+
+  <div class="payment-card">
+
+    <p><strong>Room:</strong> {{ room }}</p>
+
+<p>
+  <strong>Total Amount:</strong> ₹ {{ amount }}
+</p>
+
+<!-- DEMO PAYMENT BUTTON -->
+<button class="upi-btn" (click)="payWithUPI()">
+  Pay with PhonePe / UPI
+</button>
+
+<hr>
+
+<!-- DEMO QR CODE -->
+<h4>Or Scan & Pay</h4>
+
+<img
+  src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=HILL_EXPLORER_DEMO_PAYMENT"
+  alt="UPI QR Code"
+  class="qr-image"
+/>
+
+<p class="demo-note">
+  Scan using PhonePe / GPay / Paytm
+</p>
+
+<button class="done-btn" (click)="completePayment()">
+  I Have Completed Payment
+</button>
+
+  </div>
+
+</div>

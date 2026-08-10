@@ -1,0 +1,85 @@
+<section class="contact-section">
+
+  <h2 class="contact-title">Get in Touch</h2>
+
+  <div class="contact-container">
+
+    <!-- LEFT FORM -->
+    <div class="contact-form">
+
+      <h3>Send a Message</h3>
+
+      <form #contactForm="ngForm" (ngSubmit)="sendMessage(contactForm)">
+
+        <div class="form-row">
+          <div class="input-group">
+            <label>First Name</label>
+            <input type="text" placeholder="John">
+          </div>
+
+          <div class="input-group">
+            <label>Last Name</label>
+            <input type="text" placeholder="Doe">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="input-group">
+            <label>Email</label>
+            <input type="email" placeholder="Ex: johndoe@email.com">
+          </div>
+
+          <div class="input-group">
+            <label>Mobile</label>
+            <input type="text" placeholder="+91 987 654 3210">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label>Message</label>
+          <textarea rows="6" placeholder="Write your message here..."></textarea>
+        </div>
+
+        <button type="submit" class="send-btn">Send</button>
+
+        <p *ngIf="successMessage" class="success-msg">
+  Message sent successfully! We will contact you soon.
+</p>
+
+      </form>
+
+    </div>
+
+
+    <!-- RIGHT CONTACT INFO -->
+    <div class="contact-info">
+
+      <div class="info-box">
+
+        <h3>Contact Info</h3>
+
+        <p>📍 Connaught Palace, New Delhi India</p>
+        <p>✉️ adellichandana@gmail.com</p>
+        <p>📞 +91 987 654 3210 </p>
+
+        <div class="social-icons">
+          <span>🌐</span>
+          <span>🐦</span>
+          <span>💼</span>
+          <span>📷</span>
+        </div>
+
+      </div>
+
+
+      <div class="map-box">
+        <iframe
+          src="https://maps.google.com/maps?q=Connaught%20Place%20Delhi&t=&z=13&ie=UTF8&iwloc=&output=embed">
+        </iframe>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

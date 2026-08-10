@@ -1,0 +1,151 @@
+<div class="container mt-5 booking-container">
+
+<!-- Selected Destination -->
+<div class="card p-3 mb-4 shadow-sm">
+
+<div *ngIf="selectedPlace">
+
+<h4>{{ selectedPlace.name }}</h4>
+
+<p>{{ selectedPlace.location }}</p>
+
+<p>Hotel Price per Night : ₹ {{ selectedPlace.hotelPrice }}</p>
+
+</div>
+
+</div>
+
+
+<!-- Booking Details -->
+
+<div class="card p-4 mb-4">
+
+<h5>Booking Details</h5>
+
+<div class="row">
+
+<div class="col-md-4">
+
+<label>Check-in</label>
+
+<input type="date" class="form-control" [(ngModel)]="checkIn">
+
+</div>
+
+<div class="col-md-4">
+
+<label>Check-out</label>
+
+<input type="date" class="form-control" [(ngModel)]="checkOut">
+
+</div>
+
+<div class="col-md-4">
+
+<label>Rooms</label>
+
+<input type="number" class="form-control" [(ngModel)]="rooms">
+
+</div>
+
+</div>
+
+<div class="row mt-3">
+
+<div class="col-md-6">
+
+<label>Adults</label>
+
+<input type="number" class="form-control" [(ngModel)]="adults">
+
+</div>
+
+<div class="col-md-6">
+
+<label>Children</label>
+
+<input type="number" class="form-control" [(ngModel)]="children">
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Room Selection -->
+
+<div class="card p-3">
+
+<h5>Select Room Type</h5>
+
+<div class="row">
+
+<div class="col-md-4" *ngFor="let room of roomTypes">
+
+<div class="card p-3 mb-3">
+
+<h6>{{room.name}}</h6>
+
+<p>₹ {{room.price}} / night</p>
+
+<button
+
+class="btn"
+
+[ngClass]="selectedRoom === room ? 'btn-success':'btn-outline-primary'"
+
+(click)="selectRoom(room)">
+
+{{selectedRoom === room ? 'Selected':'Select'}}
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Summary -->
+
+<div *ngIf="selectedRoom" class="summary-card mt-4">
+
+<h4>Booking Summary</h4>
+
+<div class="row-line">
+
+<span>Room:</span>
+
+<span>{{selectedRoom.name}}</span>
+
+</div>
+
+<div class="row-line">
+
+<span>Nights:</span>
+
+<span>{{nights}}</span>
+
+</div>
+
+<div class="row-line">
+
+<span>Total:</span>
+
+<span>₹ {{totalBeforeTax}}</span>
+
+</div>
+
+<button class="pay-btn" (click)="goToPayment()">
+
+Continue to Payment
+
+</button>
+
+</div>
+
+</div>

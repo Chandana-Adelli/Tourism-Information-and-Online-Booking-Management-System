@@ -1,0 +1,43 @@
+.auth-bg{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+}
+
+.auth-box{
+  background:#8fafb5;
+  padding:40px;
+  border-radius:10px;
+  width:400px;
+  text-align:center;
+}
+
+input{
+  width:100%;
+  padding:10px;
+  margin:10px 0;
+  border-radius:5px;
+  border:none;
+}
+
+button{
+  width:100%;
+  padding:10px;
+  background:#2ecc71;
+  border:none;
+  border-radius:5px;
+  color:white;
+  font-weight:bold;
+}
+
+.signup-link{
+  color: #08f433;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.signup-link:hover{
+  text-decoration: underline;
+}
